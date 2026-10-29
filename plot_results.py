@@ -46,7 +46,7 @@ def plot_convergence() -> bool:
     # The zoom panel only makes sense if there are enough points.
     with_zoom = len(points) >= 30
     rows = 2 if with_zoom else 1
-    fig, axes = plt.subplot(rows, 1, figsize=(10, 4.5 * rows))
+    fig, axes = plt.subplots(rows, 1, figsize=(10, 4.5 * rows))
     if rows == 1:
         axes = [axes]
 
@@ -162,7 +162,7 @@ def plot_law() -> bool:
 def main() -> int:
     if not DATA_FOLDER.exists():
         print("The 'results/' folder does not exist.")
-        print("First, run: python montecarlo_pi.py --guardar")
+        print("First, run: python montecarlo_pi.py --save")
         return 1
     
     IMG_FOLDER.mkdir(exist_ok=True)

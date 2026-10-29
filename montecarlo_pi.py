@@ -138,7 +138,7 @@ def fill_missing(args: argparse.Namespace) -> argparse.Namespace:
         return args
 
     print()
-    print("  Values ​​not defined in the terminal.")
+    print("  Values not defined in the terminal.")
     print("  Press Enter to accept the value in brackets.")
     print()
 
@@ -202,7 +202,7 @@ def fill_missing(args: argparse.Namespace) -> argparse.Namespace:
             info=(
                 "  Save the results?\n" 
                 "    Write the numbers to files in the 'results/' directory. Then,\n" 
-                "    'graficar.py' reads them to generate the plots."
+                "    'plot_results.py' reads them to generate the plots."
             )
         )
     return args
@@ -375,7 +375,7 @@ def print_convergence(
     print()
     print(f"  Real value: {REAL_PI:.10f}")
     print(f"  Final error: {last:.5f}")
-    print(f"  Error provided for by law: {theoretical_error(points[-1]):.5f}")
+    print(f"  Error predicted by the law:: {theoretical_error(points[-1]):.5f}")
     print()
 
 
@@ -414,7 +414,7 @@ def build_parser() -> argparse.ArgumentParser:
         default=None,
         metavar="N",
         help=(
-            "Values ​​of N for the 1/sqrt(N) rule table."
+            "Values ​​of N for the 1/sqrt(N) rule table.\n"
             "If not specified, the user is prompted (default: 100, 400, 1600, 6400, 25600, 102400)."
         )
     )
@@ -425,7 +425,7 @@ def build_parser() -> argparse.ArgumentParser:
         default=None,
         metavar="R",
         help=(
-            "How many times to repeat each N in order to average out the error."
+            "How many times to repeat each N in order to average out the error.\n"
             "If it isn't written down, ask (def. 100)."
         )
     )
@@ -436,7 +436,7 @@ def build_parser() -> argparse.ArgumentParser:
         default=None,
         metavar="N",
         help=(
-            "Total points for the convergence curve"
+            "Total points for the convergence curve.\n"
             "If it’s not written down, ask (def. 100000)."
         )
     )
@@ -450,7 +450,7 @@ def build_parser() -> argparse.ArgumentParser:
     )
 
     parser.add_argument(
-        "-s", "--seed",
+        "-S", "--seed",
         type=int,
         default=None,
         metavar="S",
