@@ -152,7 +152,7 @@ numerically.
 Requires **Python 3.10+**.
 
 ```bash
-git clone https://github.com/<your-username>/pi.git
+git clone https://github.com/rymi14/monte-carlo-pi
 cd pi
 
 python3 -m venv .venv
