@@ -14,7 +14,3 @@ ENV/
 results/
 
 # The graphics in img/ ARE version-controlled, so that the README can display them.
-
-# Temporary
-instrucciones.txt
-
